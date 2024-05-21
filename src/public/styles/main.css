@@ -1,0 +1,35 @@
+:root {
+    --custom-bg:rgb(158, 174, 206);
+    --custom-bg-footer:rgb(33,41,52);
+    --z-index-navbar:1
+}
+
+.custom-bg {
+    background: var(--custom-bg) !important;
+}
+
+.custom-bg-footer {
+    background: var(--custom-bg-footer) !important;
+}
+
+.custom-gp-color-white a {
+    color: white;
+    text-decoration: none;
+    width: max-content;
+    display: block;
+    font-weight: 100;
+}
+.custom-gp-color-white hr {
+    border: 1px solid white;
+}
+.custom-z-index-navbar {
+    z-index: var(--z-index-navbar) !important;
+    
+}
+.custom-list-group a {
+    border: none;
+}
+.custom-list-group .list-group {
+    gap: .5rem;
+    width: max-content;
+}

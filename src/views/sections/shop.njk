@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="dist\bootstrap-icons\font\bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% include "navbar.njk" %}
+    <main class="px-4">
+      <article class="row gx-5">
+      <section class="section-category col-12 col-xl-2 ">
+    <div class="accordion custom-list-group" id="accordionExample d-flex flex-wrap" >
+      <h2 class="py-4">CATEGORIAS</h2>
+  <div class="accordion-item border-0">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        MENS
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="accordion-body">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">abrigos</a> 
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">atuendos</a> 
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">vestidos</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">accesorios</a>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item border-0">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        WOMENS
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">abrigos</a> 
+          <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">atuendos</a> 
+          <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">vestidos</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">accesorios</a>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item border-0">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        OTHERS
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="accordion-body">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">abrigos</a> 
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">atuendos</a> 
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">vestidos</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">accesorios</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="section-products col-12 col-xl-10 p-4"><div class=" products-container row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-xxl-6 g-4"></div>
+  <div class="d-flex justify-content-center p-4 shadow">
+    <button type="button" class="btn btn-info px-5 py-3 fw-bolder btn-skip">Load more</button>
+  </div>
+  </section>
+
+</article>
+</main>
+    {% include "modal-signin.njk" %}
+    {% include "modal-signup.njk" %}
+    {% include "footer.njk" %}
+    <script type="module" src="scripts/fetchProducts.js"></script>
+    <script type="module" src="scripts/validations/sign-in.js"></script>
+    <script type="module" src="scripts/validations/sign-up.js"></script>
+    <script src="/dist/js/bootstrap.js" type="module"></script>
+  </body>
+</html>

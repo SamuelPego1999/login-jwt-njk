@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="dist\bootstrap-icons\font\bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% include "navbar.njk" %}
+   
+    {% include "modal-signin.njk" %}
+    {% include "modal-signup.njk" %}
+    {% include "footer.njk" %}
+    
+    <script type="module" src="scripts/validations/sign-in.js"></script>
+    <script type="module" src="scripts/validations/sign-up.js"></script>
+    <script src="/dist/js/bootstrap.js" type="module"></script>
+  </body>
+</html>
