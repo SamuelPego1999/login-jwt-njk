@@ -27,8 +27,8 @@ export const signIn = async (req, res) => {
     if (!compare) {
       return res.status(401).send({ message: "contraseña incorrecta" });
     }
-    const token = jwt.sign({logged:true},process.env.SECRET)
-    const cookie = res.cookie("jwt",token,{httpOnly:true})
+    const token = jwt.sign({logged:true},process.env.SECRET,{expiresIn:"10d"})
+    const cookie = res.cookie("jwt",token,{httpOnly:true,expires:new Date(Date.now() + 86400000 * 10)})
 
     return res.status(200).send({redirect:"/section"})
 
