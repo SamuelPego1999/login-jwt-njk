@@ -23,3 +23,7 @@ routerGet.get("/logOut",(req,res)=>{
     res.clearCookie("jwt")
     res.render("section.njk",{title:"app njk",logged:false})
 })
+
+routerGet.get("/cart",(req,res)=> {
+    res.render("cart.njk")
+})

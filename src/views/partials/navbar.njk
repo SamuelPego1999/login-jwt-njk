@@ -32,7 +32,7 @@
       </ul>
       <ul class="navbar-nav ">
         {% if (logged) %}
-        <div class="btn-group me-2" role="group" aria-label="Second group">
+        <div class="btn-group me-2 d-flex align-items-center" role="group" aria-label="Second group">
          <a href="/logOut"  rel="noopener noreferrer">LOG OUT</a>
         </div>
         {% else %}
@@ -48,7 +48,13 @@
             </button>
           </div>
           {% endif %}
-          
+          <a href="/cart" class="btn position-relative p-1" role="button">
+            <img src="dist/bootstrap-icons/icons/cart-fill.svg" alt="cart icon" title="cart icon">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
         </div>
       </ul>
     </div>
