@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link
       rel="stylesheet"
       href="dist\bootstrap-icons\font\bootstrap-icons.min.css" 
-    />
+/>
     <link rel="stylesheet" href="dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css"/>
     <title>{{ title }}</title>
   </head>
   <body>
@@ -45,21 +45,21 @@
             src="dist/bootstrap-icons/icons/airplane-engines-fill.svg"
             class="d-block mx-auto w-50"
             alt="..."
-          />
+/>
         </div>
         <div class="carousel-item">
           <img
             src="dist/bootstrap-icons/icons/alarm.svg"
             class="d-block mx-auto w-50"
             alt="..."
-          />
+/>
         </div>
         <div class="carousel-item">
           <img
             src="dist/bootstrap-icons/icons/amazon.svg"
             class="d-block mx-auto w-50"
             alt="..."
-          />
+/>
         </div>
       </div>
       <button
@@ -81,18 +81,35 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <div class="toast toast-login align-items-center  text-bg-primary border-0  position-fixed top-50 start-50 translate-middle" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+     Ya esta verificado puede loguearse
+    </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto btn-toast-login" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="toast toast-invalid align-items-center  text-bg-primary border-0  position-fixed top-50 start-50 translate-middle" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+     Token invalido vuelva a loguearse para enviarle el email de verificacion nuevamente
+    </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto btn-toast-invalid" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
     {% include "modal-signin.njk" %}
     {% include "modal-signup.njk" %}
     {% include "footer.njk" %}
-    
+
     <script type="module" src="scripts/validations/sign-in.js"></script>
     <script type="module" src="scripts/validations/sign-up.js"></script>
-    <script src="/dist/js/bootstrap.js" type="module"></script>
+    <script src="dist/js/bootstrap.bundle.js" type="module"></script>
+    <script src="scripts/toastHandler.js" type="module"></script>
+
   </body>
 </html>
 
 
 
 
-
-
+  

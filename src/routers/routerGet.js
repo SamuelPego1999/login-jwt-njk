@@ -1,6 +1,7 @@
 import express from "express"
 import { getProducts } from "../controllers/getProducts.js"
 import { tokenVerification } from "../utilities/tokenVerification.js"
+import { userVerification } from "../controllers/autentications/userVerification.js"
 
 export const routerGet = express.Router()
 
@@ -25,5 +26,8 @@ routerGet.get("/logOut",(req,res)=>{
 })
 
 routerGet.get("/cart",(req,res)=> {
-    res.render("cart.njk")
+    const logged = tokenVerification(req,res)
+    res.render("cart.njk",{title:"app njk",logged:logged})
 })
+
+routerGet.get("/userVerification/:token",userVerification)
